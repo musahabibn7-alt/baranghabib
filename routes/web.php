@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\KategoriController;
+
+Route::resource('kategori', KategoriController::class);
 
 // Public routes
 Route::get('/', [BarangController::class, 'publicIndex'])->name('welcome');

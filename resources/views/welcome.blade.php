@@ -137,7 +137,26 @@
         <div class="text-center mb-12">
             <span class="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 font-semibold rounded-full text-sm mb-4">
                 Koleksi Kami
-            </span>
+           <!-- KATEGORI (CLEAN CHIP STYLE) -->
+<div class="mb-12 text-center">
+
+    <h3 class="text-2xl font-bold text-gray-900 mb-6">
+        Kategori
+    </h3>
+
+    <div class="flex flex-wrap justify-center gap-3">
+        @foreach($kategoris as $kategori)
+            <a href="#"
+               class="px-5 py-2 bg-gray-100 text-gray-700 rounded-full 
+                      hover:bg-blue-600 hover:text-white 
+                      transition duration-300 font-medium shadow-sm hover:shadow-md">
+                
+                {{ $kategori->nama }}
+            </a>
+        @endforeach
+    </div>
+
+</div>
             <h2 class="text-4xl font-bold text-gray-900 mb-4">Daftar Produk Furniture</h2>
             <p class="text-gray-600 max-w-2xl mx-auto">
                 Pilih dari berbagai koleksi furniture berkualitas untuk melengkapi ruang Anda

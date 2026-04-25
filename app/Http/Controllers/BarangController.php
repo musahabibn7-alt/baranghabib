@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Barang;
+use App\Models\Kategori;
 use Illuminate\Support\Facades\Storage;
 
 class BarangController extends Controller
@@ -14,7 +15,8 @@ class BarangController extends Controller
     public function index()
     {
         $barangs = Barang::latest()->get();
-        return view('barangs.index', compact('barangs'));
+        $kategoris = Kategori::all();
+        return view('barangs.index', compact('barangs', 'kategoris'));
     }
 
     /**
@@ -23,7 +25,8 @@ class BarangController extends Controller
     public function publicIndex()
     {
         $barangs = Barang::latest()->get();
-        return view('welcome', compact('barangs'));
+        $kategoris = Kategori::all();
+        return view('welcome', compact('barangs', 'kategoris'));
     }
 
     /**

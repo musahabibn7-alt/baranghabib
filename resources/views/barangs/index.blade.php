@@ -24,9 +24,13 @@
                 {{ session('success') }}
             </div>
         @endif
-
+   
         <div class="flex justify-between items-center mb-6">
             <h2 class="text-2xl font-bold text-gray-800">Kelola Barang</h2>
+             <a href="{{ route('kategori.index') }}" 
+    class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+    Kelola Kategori
+    </a>
             <a href="{{ route('barangs.create') }}" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
                 + Tambah Barang
             </a>
